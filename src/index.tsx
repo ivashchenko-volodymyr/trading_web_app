@@ -1,5 +1,18 @@
-import { serve } from "bun";
+import { serve, type WebSocketHandler } from "bun";
 import index from "./index.html";
+
+const websocketHandler: WebSocketHandler = {
+  message(ws, message) {
+    // Echo the message back to the client
+    ws.send(message);
+  },
+  open(ws) {
+    console.log("WebSocket connection opened");
+  },
+  close(ws, code, message) {
+    console.log("WebSocket connection closed", { code, message });
+  }
+};
 
 const server = serve({
   routes: {
@@ -28,7 +41,7 @@ const server = serve({
       });
     },
   },
-
+  websocket: websocketHandler,
   development: process.env.NODE_ENV !== "production" && {
     // Enable browser hot reloading in development
     hmr: true,
