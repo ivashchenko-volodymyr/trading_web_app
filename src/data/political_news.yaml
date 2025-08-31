@@ -1,0 +1,10 @@
+# src/data/political_news.yaml
+items:
+  - title: "Central Bank Signals Policy Shift"
+    url: "https://example.com/politics/cb-policy-shift"
+    source: "Example Politics"
+    time: "2025-08-28T09:00:00Z"
+  - title: "Trade Talks Resume Between Major Economies"
+    url: "https://example.com/politics/trade-talks-resume"
+    source: "Example Politics"
+    time: "2025-08-27T17:45:00Z"
