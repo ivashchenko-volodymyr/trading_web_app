@@ -1,14 +1,14 @@
 import {APITester} from "./APITester";
 import "./index.css";
 
-import reactLogo from "./react.svg";
+import tradeLogo from "./trade-logo.svg";
 import {MarketDashboard} from "./MarketDashboard";
 
 export function App() {
   return (
     <div className="app">
       <div className="logo-container">
-        <img src={reactLogo} alt="React Logo" className="logo react-logo"/>
+        <img src={tradeLogo} alt="Trade Logo" className="logo trade-logo"/>
       </div>
 
       <h1>Trading Dashboard</h1>
