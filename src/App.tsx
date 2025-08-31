@@ -1,4 +1,3 @@
-import {APITester} from "./APITester";
 import "./index.css";
 
 import tradeLogo from "./trade-logo.svg";
@@ -15,9 +14,6 @@ export function App() {
       <p>Select an instrument to view its historical prices, trade controls, and related news.</p>
 
       <MarketDashboard/>
-
-      <h2 style={{marginTop: 32}}>API Tester</h2>
-      <APITester/>
     </div>
   );
 }
