@@ -7,7 +7,7 @@ import { TradeButton, TradeType } from "@/TradeButtons.tsx";
 type Instrument = {
     id: string;           // unique id
     label: string;        // display name
-    symbol: string;       // symbol for data provider (e.g., "aapl", "btcusd")
+    symbol: string;       // symbol for data provider (e.g., "AAPL.US", "BTCUSD")
     group: string;        // e.g., Stocks, Crypto, Forex
     currency?: string;    // e.g., USD
     provider?: "stooq";   // for now
