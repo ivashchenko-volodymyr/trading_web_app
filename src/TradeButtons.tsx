@@ -5,16 +5,16 @@ export enum TradeType {
   SELL = "sell",
 }
 
-export function TradeButton({ tradeType, symbol }: { tradeType: TradeType; symbol: string }) {
+export function TradeButton({ tradeType, symbol, quantity = 1 }: { tradeType: TradeType; symbol: string; quantity?: number }) {
   const [toast, setToast] = useState<string | null>(null);
 
   const handleBuy = () => {
-    setToast(`Buying ${symbol}... To invest in portal development please contact: vladimir.v.iv\@gmail.com`);
+    setToast(`Buying ${quantity} ${symbol}... To invest in portal development please contact: vladimir.v.iv\@gmail.com`);
     setTimeout(() => setToast(null), 20000); // auto-hide after 20 seconds
   };
 
   const handleSell = () => {
-    setToast(`Selling ${symbol}... To invest in portal development please contact: vladimir.v.iv\@gmail.com`);
+    setToast(`Selling ${quantity} ${symbol}... To invest in portal development please contact: vladimir.v.iv\@gmail.com`);
     setTimeout(() => setToast(null), 3000);
   };
 

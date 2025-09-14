@@ -31,6 +31,8 @@ export function MarketDashboard() {
     const [data, setData] = useState<PricePoint[]>([]);
     const [isMarketNewsOpen, setMarketNewsOpen] = useState(false);
     const [isPoliticalNewsOpen, setPoliticalNewsOpen] = useState(false);
+    const [qty, setQty] = useState<number>(1);
+
 
     // Load instruments from server-side YAML
     useEffect(() => {
@@ -161,8 +163,22 @@ export function MarketDashboard() {
                     )}
 
                     <div className="trade-actions">
-                      <TradeButton tradeType={TradeType.BUY} symbol={symbol} />
-                      <TradeButton tradeType={TradeType.SELL} symbol={symbol} />
+                      <label className="control" style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                        <span>Qty</span>
+                        <input
+                          type="number"
+                          min={1}
+                          step={1}
+                          value={qty}
+                          onChange={(e) => {
+                            const v = Number(e.target.value);
+                            setQty(Number.isFinite(v) && v > 0 ? Math.floor(v) : 1);
+                          }}
+                          style={{ width: 80 }}
+                        />
+                      </label>
+                      <TradeButton tradeType={TradeType.BUY} symbol={symbol} quantity={qty} />
+                      <TradeButton tradeType={TradeType.SELL} symbol={symbol} quantity={qty} />
                     </div>
 
                     <div className="news-actions">
