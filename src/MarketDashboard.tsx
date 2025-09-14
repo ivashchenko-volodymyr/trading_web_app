@@ -133,7 +133,7 @@ export function MarketDashboard() {
 
             <div className="content-row">
                 <div className="chart-card">
-                    <PriceChart data={data} height={340} />
+                    <PriceChart data={data} height={440} />
                 </div>
 
                 <div className="price-card">

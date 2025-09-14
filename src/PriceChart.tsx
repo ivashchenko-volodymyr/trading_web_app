@@ -11,7 +11,7 @@ type PricePoint = {
 
 export function PriceChart({
                                data,
-                               height = 320,
+                               height = 420,
                                padding = { top: 16, right: 32, bottom: 24, left: 44 },
                            }: {
     data: PricePoint[];
@@ -19,6 +19,8 @@ export function PriceChart({
     padding?: { top: number; right: number; bottom: number; left: number };
 }) {
     const { pathD, minY, maxY, ticksY, xLabels, viewBox } = useMemo(() => {
+        const W = 1800;
+        const H = height;
         if (!data?.length) {
             return {
                 pathD: "",
@@ -26,12 +28,10 @@ export function PriceChart({
                 maxY: 0,
                 ticksY: [] as number[],
                 xLabels: [] as { x: number; label: string }[],
-                viewBox: `0 0 800 ${height}`,
+                viewBox: `0 0 ${W} ${H}`,
             };
         }
 
-        const W = 800;
-        const H = height;
         const { top, right, bottom, left } = padding;
 
         const ys = data.map((d) => d.close);
@@ -74,7 +74,6 @@ export function PriceChart({
             xLabels,
             viewBox: `0 0 ${W} ${H}`,
         };
-
     }, [data, height, padding]);
 
     return (
