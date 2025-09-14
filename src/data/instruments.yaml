@@ -1,48 +1,60 @@
 instruments:
   - id: aapl
-    label: Apple (AAPL)
-    symbol: aapl
+    label: Apple Inc (AAPL.US)
+    symbol: aapl.us
     group: Stocks
     currency: USD
     provider: stooq
   - id: msft
-    label: Microsoft (MSFT)
-    symbol: msft
+    label: Microsoft Corp (MSFT.US)
+    symbol: msft.us
     group: Stocks
     currency: USD
     provider: stooq
   - id: tsla
-    label: Tesla (TSLA)
-    symbol: tsla
+    label: Tesla Inc (TSLA.US)
+    symbol: tsla.us
     group: Stocks
     currency: USD
     provider: stooq
   - id: nvda
-    label: NVIDIA (NVDA)
-    symbol: nvda
+    label: NVIDIA Corp (NVDA.US)
+    symbol: nvda.us
     group: Stocks
     currency: USD
     provider: stooq
   - id: btcusd
-    label: Bitcoin (BTCUSD)
+    label:  Bitcoin / U.S. Dollar (BTCUSD)
     symbol: btcusd
     group: Crypto
     currency: USD
     provider: stooq
-  - id: ethusd
-    label: Ethereum (ETHUSD)
-    symbol: ethusd
+  - id: ethv
+    label: Ethereum Cryptocurrency USD (ETH.V)
+    symbol: eth.v
     group: Crypto
     currency: USD
     provider: stooq
   - id: eurusd
-    label: EUR/USD
+    label: Euro / U.S. Dollar (EURUSD)
     symbol: eurusd
     group: Forex
     currency: USD
     provider: stooq
+  - id: eurpln
+    label: Euro / Polish Zloty (EURPLN)
+    symbol: eurpln
+    group: Forex
+    currency: PLN
+    provider: stooq
+  - id: plneur
+    label: Polish Zloty / Euro (PLNEUR)
+    symbol: plneur
+    group: Forex
+    currency: EUR
+    provider: stooq
   - id: usdjpy
-    label: USD/JPY
+    label: U.S. Dollar / Japanese Yen (USDJPY)
     symbol: usdjpy
     group: Forex
     currency: JPY
