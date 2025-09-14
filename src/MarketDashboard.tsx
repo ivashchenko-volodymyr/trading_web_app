@@ -73,7 +73,7 @@ export function MarketDashboard() {
             }
         }
 
-        load();
+        void load();
         return () => {
             cancelled = true;
         };
