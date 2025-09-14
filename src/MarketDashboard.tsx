@@ -60,7 +60,12 @@ export function MarketDashboard() {
                     days: String(days),
                 });
                 const res = await fetch(`/api/price-history?${params.toString()}`);
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                if (!res.ok) {
+                  // handle the error path without throwing
+                  setError(`HTTP ${res.status}`);
+                  setData([]);
+                  return;
+                }
                 const json = (await res.json()) as { symbol: string; points: PricePoint[] };
                 if (!cancelled) setData(json.points);
             } catch (e: any) {
