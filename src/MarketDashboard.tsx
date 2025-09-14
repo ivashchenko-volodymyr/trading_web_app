@@ -25,7 +25,7 @@ type PricePoint = {
 export function MarketDashboard() {
     const [instruments, setInstruments] = useState<Instrument[]>([]);
     const [symbol, setSymbol] = useState<string>("");
-    const [days, setDays] = useState(180);
+    const [days, setDays] = useState(730);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [data, setData] = useState<PricePoint[]>([]);
