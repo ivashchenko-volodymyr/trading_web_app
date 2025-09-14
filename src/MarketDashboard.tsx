@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { PriceChart } from "./PriceChart";
 import { NewsPanel } from "./NewsPanel";
 import { SlideOver } from "./SlideOver";
+import { TradeButton, TradeType } from "@/TradeButtons.tsx";
 
 type Instrument = {
     id: string;           // unique id
@@ -155,8 +156,8 @@ export function MarketDashboard() {
                     )}
 
                     <div className="trade-actions">
-                        <button className="btn buy">Buy</button>
-                        <button className="btn sell">Sell</button>
+                      <TradeButton tradeType={TradeType.BUY} symbol={symbol} />
+                      <TradeButton tradeType={TradeType.SELL} symbol={symbol} />
                     </div>
 
                     <div className="news-actions">
